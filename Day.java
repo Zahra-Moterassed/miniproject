@@ -10,14 +10,14 @@ public class Day {
                 break;
             } else {
                 for (int j = 0; j < players.length; j++) {
-                    if (s[0].equals(players[j])) {
+                    if (s[0].equals(players[j].name)) {
                         if (!players[j].isSilenced) {
                             for (int k = 0; k < players.length; k++) {
                                 if (s[1].equals(players[k].name)) {
-                                    players[j].count++;
-                                } else if (!s[1].equals(players[k].name) && k == players.length - 1) {
-                                    System.out.println("user not found");
-                                }
+                                    players[k].count++;
+                                }// else if (!s[1].equals(players[k].name) && k == players.length - 1) {
+                                  //  System.out.println("user not found");
+                                //}
                             }
                         } else {
                             System.out.println("voter is silenced");
