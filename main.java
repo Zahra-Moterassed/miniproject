@@ -104,6 +104,9 @@ public class main {
                     Index_joker = j;
                 }
             }
+            if (!players[Index_joker].IsAlive){
+                return;
+            }
             if (players[Index_joker].IsAlive || players[Index_joker].role != Role.Joker) {
                 System.out.println("Night " + night.numberOfNight);
                 night.numberOfNight++;
