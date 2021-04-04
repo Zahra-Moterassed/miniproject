@@ -137,15 +137,15 @@ public class main {
                         day.numberOfDay++;
                         System.out.println("Day " + day.numberOfDay);
                         if (players[night.nightvoting(players,mafiacounter,villagercounter,a,doctor,detective)].IsAlive){
-                            System.out.println("mafia tried to kill"+players[night.nightvoting(players,mafiacounter,villagercounter,a,doctor,detective)].name);
+                            System.out.println("mafia tried to kill "+players[night.nightvoting(players,mafiacounter,villagercounter,a,doctor,detective)].name);
                         }
                         else{
-                            System.out.println("mafia tried to kill"+players[night.nightvoting(players,mafiacounter,villagercounter,a,doctor,detective)].name);
-                            System.out.println(players[night.nightvoting(players,mafiacounter,villagercounter,a,doctor,detective)].name+"was killed");
+                            System.out.println("mafia tried to kill "+players[night.nightvoting(players,mafiacounter,villagercounter,a,doctor,detective)].name);
+                            System.out.println(players[night.nightvoting(players,mafiacounter,villagercounter,a,doctor,detective)].name+" was killed");
                         }
                         for (int i=0;i< players.length;i++){
                             if (players[i].isSilenced){
-                                System.out.println("Silenced"+players[i].name);
+                                System.out.println("Silenced "+players[i].name);
                             }
                         }
                         break;
