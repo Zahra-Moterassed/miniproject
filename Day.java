@@ -2,29 +2,30 @@ import java.util.Scanner;
 public class Day {
     int numberOfDay=1;
     public int dayvoting(Player[] players,int mafiacounter,int villagercounter){
-        int len=0;
         Scanner scanner=new Scanner(System.in);
-        while (len< players.length) {
+        while (scanner.hasNext()) {
             String a = scanner.nextLine();
             String[] s = a.split(" ");
-            for (int j = 0; j < players.length; j++) {
-                if (s[0].equals(players[j])) {
-                    if (!players[j].isSilenced) {
-                        for (int k = 0; k < players.length; k++) {
-                            if (s[1].equals(players[k].name)) {
-                                players[j].count++;
-                            } else if (!s[1].equals(players[k].name) && k == players.length - 1) {
-                                System.out.println("user not found");
+            if (a.equals("end_vote")) {
+                break;
+            } else {
+                for (int j = 0; j < players.length; j++) {
+                    if (s[0].equals(players[j])) {
+                        if (!players[j].isSilenced) {
+                            for (int k = 0; k < players.length; k++) {
+                                if (s[1].equals(players[k].name)) {
+                                    players[j].count++;
+                                } else if (!s[1].equals(players[k].name) && k == players.length - 1) {
+                                    System.out.println("user not found");
+                                }
                             }
+                        } else {
+                            System.out.println("voter is silenced");
                         }
-                    } else {
-                        System.out.println("voter is silenced");
                     }
                 }
             }
-            len++;
         }
-        String h=scanner.nextLine();
         int max=0;//max count
         int maxl=0;//max count's index
         int counter=0;// number of maxes
