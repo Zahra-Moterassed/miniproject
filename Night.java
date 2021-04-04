@@ -21,7 +21,7 @@ public class Night {
                                 } else {
                                     System.out.println("votee already dead");
                                     break;
-                                }
+                               }
                             } else if (!z[1].equals(players[k]) && k == players.length - 1) {
                                 System.out.println("user not joined");
                             }

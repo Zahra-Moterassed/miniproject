@@ -60,7 +60,7 @@ public class Day {
         if (players[maxl].role==Role.Joker){
             System.out.println("Joker won!");
         }
-        else if(players[maxl].role!=Role.Joker) {
+        else if(players[maxl].role!=Role.Joker && counter==0) {
             System.out.println(players[maxl].name + " died");
         }
         return maxl;
